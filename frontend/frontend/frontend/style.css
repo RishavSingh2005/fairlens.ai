@@ -1,1 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
 
+.container {
+  width: 420px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.tagline {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button.fix {
+  background: #16a34a;
+}
+
+.explanation {
+  background: #fff7cc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.improve {
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
