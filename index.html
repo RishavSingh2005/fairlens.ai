@@ -1,1 +1,43 @@
-# fairlens.ai
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FairLens AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>FairLens AI</h1>
+    <p class="tagline">
+      AI Bias Auditor for Safer Decisions
+    </p>
+
+    <div class="card">
+      <input type="file" id="fileInput" accept=".csv" />
+      <button onclick="analyze()">Analyze Bias</button>
+    </div>
+
+    <div class="card hidden" id="results">
+      <h3>Bias Analysis Result</h3>
+
+      <p><strong>Bias Score:</strong> <span id="biasScore"></span></p>
+      <p><strong>Disparate Impact:</strong> <span id="impact"></span></p>
+
+      <div class="explanation" id="explanation"></div>
+
+      <button class="fix" onclick="fixBias()">Fix Bias</button>
+    </div>
+
+    <div class="card hidden" id="comparison">
+      <h3>After Bias Fix</h3>
+      <p>Before: <strong>0.35</strong></p>
+      <p>After: <strong>0.12</strong></p>
+      <p class="improve">Improvement: +65%</p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
