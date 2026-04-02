@@ -1288,6 +1288,159 @@ svg { display: block; }
 .warn   { color: var(--amber); }
 .green  { color: var(--green); }
 
+/* ══════════════════════════════════════════════════
+   SITE FOOTER
+══════════════════════════════════════════════════ */
+.site-footer {
+  margin-left: var(--sidebar-w);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 60px;
+  padding: 40px 36px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Footer left — brand block */
+.footer-left {
+  min-width: 220px;
+  max-width: 260px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-logo-mark {
+  width: 24px; height: 24px;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.footer-ring {
+  position: absolute;
+  width: 100%; height: 100%;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.footer-dot {
+  width: 7px; height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+.footer-brand em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.footer-tagline {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.footer-disclaimer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-family: var(--font-mono);
+}
+
+/* Footer links */
+.footer-links {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 130px;
+}
+
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.footer-col a {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition);
+  font-family: var(--font-body);
+}
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  padding: 14px 36px;
+}
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.footer-badges {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  transition: border-color var(--transition), color var(--transition);
+}
+.footer-badge:hover {
+  border-color: var(--border-2);
+  color: var(--text-secondary);
+}
+
+.footer-version {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1816,6 +1969,69 @@ svg { display: block; }
 
     </main>
   </div>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">
+            <span class="footer-ring"></span>
+            <span class="footer-dot"></span>
+          </div>
+          <span class="footer-brand">FairLens <em>AI</em></span>
+        </div>
+        <p class="footer-tagline">AI Bias Auditor for Safer Decisions</p>
+        <p class="footer-disclaimer">FairLens audits AI decisions. It does not make them.<br/>Results depend on dataset quality and representativeness.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Product</div>
+          <a href="#" onclick="app.goTo('dashboard');return false;">Dashboard</a>
+          <a href="#" onclick="app.goTo('upload');return false;">Upload Dataset</a>
+          <a href="#" onclick="app.goTo('analysis');return false;">Bias Analysis</a>
+          <a href="#" onclick="app.goTo('fix');return false;">Fix Bias</a>
+          <a href="#" onclick="app.goTo('report');return false;">Audit Report</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Metrics</div>
+          <a href="#">Disparate Impact</a>
+          <a href="#">Demographic Parity</a>
+          <a href="#">Equal Opportunity</a>
+          <a href="#">Predictive Parity</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Compliance</div>
+          <a href="#">EEOC Guidelines</a>
+          <a href="#">EU AI Act</a>
+          <a href="#">IEEE Ethics</a>
+          <a href="#">Documentation</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span class="footer-copy">© 2024 FairLens AI. Built for responsible AI governance.</span>
+        <div class="footer-badges">
+          <span class="footer-badge">
+            <svg viewBox="0 0 12 12" fill="none" width="11"><path d="M6 1L1.5 3v3c0 2.5 1.9 4.8 4.5 5.3C8.6 10.8 10.5 8.5 10.5 6V3L6 1z" stroke="currentColor" stroke-width="1"/></svg>
+            Fairness Certified
+          </span>
+          <span class="footer-badge">
+            <svg viewBox="0 0 12 12" fill="none" width="11"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            GDPR Compliant
+          </span>
+          <span class="footer-badge">
+            <svg viewBox="0 0 12 12" fill="none" width="11"><rect x="1.5" y="1.5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1"/><path d="M4 6h4M6 4v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Open Audit Trail
+          </span>
+        </div>
+        <span class="footer-version">v1.0.0-beta · Session FS-2024-0847</span>
+      </div>
+    </div>
+  </footer>
 
   <script>
 /**
